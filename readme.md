@@ -1,4 +1,5 @@
 # **bulk-rename-util-ps**  
+bulk-rename-util-ps is a PowerShell script designed to simplify batch file renaming with flexible customization options. It allows users to modify file names by adding or removing prefixes/suffixes, replacing characters, standardizing case, and ensuring duplicate safety. The script includes built-in safeguards to prevent unintended modifications and logs all changes for reference. A test file generator is also included to help users experiment before making permanent changes. Always create backups before execution.
 
 ## **Disclaimer**  
 This script is provided **"as is"** without any warranties or guarantees. The author assumes no responsibility for data loss, unintended file modifications, or any other issues that may arise from its use. **Use at your own risk**, and always create backups before executing the script.  
