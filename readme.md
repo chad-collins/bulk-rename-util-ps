@@ -1,4 +1,19 @@
-# Rename Script
+#bulk-rename-util-ps
+
+## create_test_files (Testing Script - Recommended to use first!)
+If you'd like to test this script, you can use the included **Test File Maker** script.
+
+### Test File Maker Features:
+- Creates a `TestFiles` folder in the current directory.
+- Generates **50 sample files** with various prefixes, suffixes, mixed cases, and special characters.
+- **Option to copy filenames** from the current directory instead of generating random ones.
+
+### Running the Test File Maker:
+```powershell
+.	create-test-files.ps1
+```
+
+## rename_files.ps1 (Main Script)
 
 ## Overview
 This PowerShell script allows users to rename files in a directory with various customization options, ensuring duplicate safety and logging changes.
@@ -39,18 +54,7 @@ rename_files.ps1
 - Read-only and system files will be skipped to prevent issues.
 - Ensure backups before running in production environments.
 
-## Bonus: Test File Generator
-If you'd like to test this script, you can use the included **Test File Maker** script.
 
-### Test File Maker Features:
-- Creates a `TestFiles` folder in the current directory.
-- Generates **50 sample files** with various prefixes, suffixes, mixed cases, and special characters.
-- **Option to copy filenames** from the current directory instead of generating random ones.
-
-### Running the Test File Maker:
-```powershell
-.	create-test-files.ps1
-```
 
 ## License
 This script is open-source and can be modified as needed.
