@@ -1,64 +1,82 @@
-#bulk-rename-util-ps
+# **bulk-rename-util-ps**  
 
-## create_test_files (Testing Script - Recommended to use first!)
-If you'd like to test this script, you can use the included **Test File Maker** script.
+## **Disclaimer**  
+This script is provided **"as is"** without any warranties or guarantees. The author assumes no responsibility for data loss, unintended file modifications, or any other issues that may arise from its use. **Use at your own risk**, and always create backups before executing the script.  
 
-### Test File Maker Features:
-- Creates a `TestFiles` folder in the current directory.
-- Generates **50 sample files** with various prefixes, suffixes, mixed cases, and special characters.
-- **Option to copy filenames** from the current directory instead of generating random ones.
+---
 
-### Running the Test File Maker:
+## **Testing the Script**  
+Since data loss is always a possibility, it’s recommended to test the script beforehand. You can use the included **`create_test_files.ps1`** script to generate sample files for testing.  
+
+### **Test File Generator Features:**  
+- Creates a `TestFiles` folder in the current directory.  
+- Generates **50 sample files** with various prefixes, suffixes, mixed cases, and special characters.  
+- **Optional:** Instead of generating random filenames, it can copy existing filenames from the current directory.  
+
+### **Running the Test File Generator:**  
 ```powershell
-.	create-test-files.ps1
+. .\create-test-files.ps1
 ```
 
-## rename_files.ps1 (Main Script)
+---
 
-## Overview
-This PowerShell script allows users to rename files in a directory with various customization options, ensuring duplicate safety and logging changes.
+## **File Renaming Script**  
 
-## Features
-- **Interactive Input**: Users can specify file extensions, prefixes, suffixes, character replacements, and case standardization.
-- **Duplicate-Safe Logic**: Ensures unique filenames by appending numbers when conflicts occur.
-- **Safety Checks**:
-  - Skips system and read-only files.
-  - Prevents renaming directories.
-  - Handles invalid characters.
-- **Logging**: Saves a record of renamed files to a timestamped log.
+### **Overview**  
+The `rename_files.ps1` script allows users to rename files in a directory with various customization options while ensuring duplicate safety and logging changes.  
 
-## Usage
-### 1. Place the script in the target directory.
-### 2. Run the script in PowerShell:
+### **Features**  
+✅ **Interactive Input** – Users can define:  
+- File extensions to rename.  
+- Prefixes and suffixes to add or remove.  
+- Character replacements.  
+- Filename case standardization.  
+
+✅ **Duplicate Handling** – Ensures unique filenames by appending numbers when conflicts occur.  
+
+✅ **Safety Measures** – The script:  
+- Skips system and read-only files.  
+- Prevents renaming directories.  
+- Handles invalid filename characters.  
+
+✅ **Logging** – Saves a timestamped log of all renamed files.  
+
+---
+
+## **Usage Instructions**  
+
+### **1. Place the script in the target directory.**  
+### **2. Run the script in PowerShell:**  
 ```powershell
-.
-rename_files.ps1
+. .\rename_files.ps1
 ```
-### 3. Follow the interactive prompts:
-- Confirm the directory.
-- Specify the file extension to rename.
-- Choose prefix/suffix removal or addition.
-- Standardize filenames to lowercase.
-- Replace specific characters.
-- Review changes before execution.
+### **3. Follow the interactive prompts:**  
+- Confirm the target directory.  
+- Specify the file extension(s) to rename.  
+- Choose prefix/suffix modifications.  
+- Standardize filenames to lowercase.  
+- Replace specific characters.  
+- Review changes before execution.  
 
-## Warning
-⚠️ **This operation CANNOT be undone!** Please make backups before running this script.
+⚠️ **Warning:** This operation **CANNOT be undone!** Always create backups before running the script.  
 
-## Requirements
-- Windows PowerShell
-- Appropriate permissions to rename files in the target directory.
+---
 
-## Notes
-- Files with identical resulting names will be appended with a number `(1), (2), etc.`.
-- Read-only and system files will be skipped to prevent issues.
-- Ensure backups before running in production environments.
+## **Requirements**  
+- Windows PowerShell  
+- Appropriate file permissions for renaming operations  
 
+---
 
+## **Additional Notes**  
+- Files with identical resulting names will be auto-numbered: `(1)`, `(2)`, etc.  
+- Read-only and system files will be skipped to prevent issues.  
+- Always create backups before running in a production environment.  
 
-## License
-This script is open-source and can be modified as needed.
+---
 
-## Author
-[Chad Collins]
+## **License**  
+This script is open-source and may be modified as needed.  
 
+## **Author**  
+[Chad Collins]  
